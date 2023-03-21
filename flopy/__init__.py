@@ -18,6 +18,8 @@ specify these boundary conditions. FloPy is an open-source project and any
 assistance is welcomed. Please email the development team if you want to
 contribute.
 
+One more warning: You are currently using a forked version of FloPy3 of 
+Matej Gedeon. This version includes support for MTHP.
 """
 # See CITATION.cff for authors
 __author__ = "FloPy Team"
@@ -32,6 +34,7 @@ from . import (
     modflowlgr,
     modpath,
     mt3d,
+    mthp,
     pest,
     plot,
     seawat,
@@ -44,6 +47,7 @@ __all__ = [
     "__version__",
     "modflow",
     "mt3d",
+    "mthp",
     "seawat",
     "modpath",
     "modflowlgr",
