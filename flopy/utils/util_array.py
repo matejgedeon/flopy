@@ -2847,7 +2847,7 @@ class Util2d(DataInterface):
             ext_unit_dict=ext_unit_dict,
             array_format=array_format,
         )
-
+        
         if cr_dict["type"] == "constant":
             u2d = cls(
                 model,

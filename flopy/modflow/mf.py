@@ -225,9 +225,7 @@ class Modflow(BaseModel):
             "chob": flopy.modflow.ModflowFlwob,
             "gbob": flopy.modflow.ModflowFlwob,
             "drob": flopy.modflow.ModflowFlwob,
-            "rvob": flopy.modflow.ModflowFlwob,
-            "vdf": flopy.seawat.SeawatVdf,
-            "vsc": flopy.seawat.SeawatVsc,
+            "rvob": flopy.modflow.ModflowFlwob
         }
 
     def __repr__(self):
