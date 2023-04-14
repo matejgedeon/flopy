@@ -1,6 +1,6 @@
 """ 
-mtbtn module. Contains the Mt3dBtn class. Note that the user can access
-the Mt3dBtn class as `flopy.mt3d.Mt3dBtn`.
+mtbtn module. Contains the MthBtn class. Note that the user can access
+the Mt3dBtn class as `flopy.mthp.MthBtn`.
 
 Additional information for this MT3DMS package can be found in the MT3DMS
 User's Manual.

@@ -8,7 +8,7 @@ class MthAdv(Package):
     Parameters
     ----------
     model : model object
-        The model object (of type :class:`flopy.mt3d.mt.Mt3dms`) to which
+        The model object (of type :class:`flopy.mthp.mth.Mthp`) to which
         this package will be added.
     mixelm : int
         MIXELM is an integer flag for the advection solution option.
@@ -186,9 +186,9 @@ class MthAdv(Package):
         filenames=None,
     ):
         if unitnumber is None:
-            unitnumber = Mt3dAdv._defaultunit()
+            unitnumber = MthAdv._defaultunit()
         elif unitnumber == 0:
-            unitnumber = Mt3dAdv._reservedunit()
+            unitnumber = MthAdv._reservedunit()
 
         # call base package constructor
         super().__init__(
@@ -268,7 +268,7 @@ class MthAdv(Package):
         f : filename or file handle
             File to load.
         model : model object
-            The model object (of type :class:`flopy.mt3d.mt.Mt3dms`) to
+            The model object (of type :class:`flopy.mthp.mth.Mthp`) to
             which this package will be added.
         ext_unit_dict : dictionary, optional
             If the arrays in the file are specified using EXTERNAL,
@@ -279,8 +279,8 @@ class MthAdv(Package):
 
         Returns
         -------
-        adv :  Mt3dAdv object
-            Mt3dAdv object.
+        adv :  MthAdv object
+            MthAdv object.
 
         Examples
         --------
