@@ -328,32 +328,30 @@ class MthMcp(Package):
         
         # Record 2
         if self.speciesfile == 1:
-            f_mcp.write(self.speciesfilename + 
-                        "     #SPECIESFILENAME\n")
+            f_mcp.write(self.speciesfilename + "\n")
         
         # Record 3 & 4 (if species are defined internally - SPECIESFILE=0)
         if self.speciesfile == 0:
             if not(os.path.isabs(self.database)):
                 f_mcp.write("relative\n")
-            f_mcp.write(os.path.normpath(self.database) + "   #DATABASE\n")
+            f_mcp.write(os.path.normpath(self.database) + "\n")
             for comp in self.component:
                 f_mcp.write(comp + "\n")
         
         # Record 5
         if self.globalfile != 0:
-            f_mcp.write(os.path.normpath(self.globalfilename) + 
-                        "    #GLOBAL\n")
+            f_mcp.write(os.path.normpath(self.globalfilename) + "\n")
 
         # Record 6
-        f_mcp.write(self.gwfile + "    #GWFILE\n")
+        f_mcp.write(self.gwfile + "\n")
         
         # Record 7
         if self.nhpfile > 0:
             for nhp in self.hpfile:
-                f_mcp.write(os.path.normpath(nhp) + "    #HPFILE\n")
+                f_mcp.write(os.path.normpath(nhp) + "\n")
         
         # Record 8
-        f_mcp.write(os.path.normpath(self.outputpath) + "    #OUTPUTPATH\n")
+        f_mcp.write(os.path.normpath(self.outputpath) + "\n")
         
         # Record 9
         f_mcp.write(self.ichemdistr.get_file_entry())
